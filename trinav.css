@@ -1,0 +1,173 @@
+/* ----------------------------------------------------------------------
+   TriNav™ Mobile — Multi-Phase UI
+   © 2025 Mark Roberts & Design52 — All Rights Reserved.
+---------------------------------------------------------------------- */
+
+/* Colours & Theme */
+:root {
+  --bg-main: #0f0f0f;
+  --bg-drawer: #181818;
+  --bg-chip: #111;
+  --icon-white: #ffffff;
+  --icon-grey: #777777;
+}
+
+/* Base */
+body {
+  margin: 0;
+  background: var(--bg-main);
+  height: 100vh;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+/* -------------------------------------------------------
+   PHASE 0 — Launcher (bottom-right floating)
+------------------------------------------------------- */
+#phase0-launcher {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: var(--bg-chip);
+  padding: 8px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  cursor: pointer;
+  z-index: 30;
+}
+
+/* -------------------------------------------------------
+   Backdrop
+------------------------------------------------------- */
+#backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 20;
+}
+#backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* -------------------------------------------------------
+   Drawer
+------------------------------------------------------- */
+#drawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  background: var(--bg-drawer);
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  overflow: hidden;
+  transition: height 0.35s ease;
+  z-index: 40;
+}
+
+/* -------------------------------------------------------
+   Header Touch Zone + Grip Pill
+------------------------------------------------------- */
+#drawer-header-touch {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  cursor: grab;
+}
+
+.drawer-grip {
+  width: 36px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* -------------------------------------------------------
+   ARROWS + Hamburgers (top-right inside drawer)
+------------------------------------------------------- */
+.drawer-arrows-right {
+  position: absolute;
+  top: 6px; /* moves arrows slightly over embedded hamburger */
+  right: 16px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.drawer-arrows-right svg {
+  width: 32px;
+  height: 32px;
+}
+
+.drawer-hamburger-line {
+  stroke: #444;
+  stroke-opacity: 0.3;
+  stroke-width: 1.8;
+}
+
+/* -------------------------------------------------------
+   PHASE 1 — 4-Icon Compact Navigation Bar
+------------------------------------------------------- */
+.phase1-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0 18px;
+}
+
+.phase1-nav i {
+  color: #fff;
+  font-size: 24px;
+  opacity: 1;
+}
+
+/* -------------------------------------------------------
+   PHASE 2 — Icon Grid
+------------------------------------------------------- */
+.grid-phase2 {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 12px 16px 40px;
+  gap: 20px;
+}
+
+.grid-phase2 .item {
+  text-align: center;
+}
+
+.grid-phase2 i {
+  font-size: 28px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* -------------------------------------------------------
+   PHASE 3 — Grid with Labels
+------------------------------------------------------- */
+.grid-phase3 {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 12px 16px 40px;
+  gap: 18px;
+  text-align: center;
+}
+
+.grid-phase3 i {
+  font-size: 28px;
+  color: #fff;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.grid-phase3 span {
+  font-size: 12px;
+  color: #ccc;
+  display: block;
+}

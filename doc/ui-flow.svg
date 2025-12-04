@@ -1,0 +1,72 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="760" height="160" viewBox="0 0 760 160" xmlns="http://www.w3.org/2000/svg">
+
+  <title>TriNav Mobile Phase Flow</title>
+  <desc>Simple flow diagram: Phase 0 → 1 → 2 → 3 with wrap-around.</desc>
+
+  <style>
+    .phase-box {
+      fill: #181818;
+      stroke: #555;
+      stroke-width: 2;
+      rx: 10;
+      ry: 10;
+    }
+    .phase-text {
+      fill: #ffffff;
+      font-size: 14px;
+      font-family: system-ui, sans-serif;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .arrow {
+      stroke: #888;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+      fill: none;
+    }
+    .label {
+      fill: #cccccc;
+      font-size: 12px;
+      font-family: system-ui, sans-serif;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#888"></path>
+    </marker>
+  </defs>
+
+  <!-- Phase 0 -->
+  <rect x="20" y="40" width="140" height="60" class="phase-box"></rect>
+  <text x="90" y="68" class="phase-text">Phase 0</text>
+  <text x="90" y="88" class="label">Launcher</text>
+
+  <!-- Phase 1 -->
+  <rect x="210" y="40" width="140" height="60" class="phase-box"></rect>
+  <text x="280" y="68" class="phase-text">Phase 1</text>
+  <text x="280" y="88" class="label">Compact Nav</text>
+
+  <!-- Phase 2 -->
+  <rect x="400" y="40" width="140" height="60" class="phase-box"></rect>
+  <text x="470" y="68" class="phase-text">Phase 2</text>
+  <text x="470" y="88" class="label">Icon Grid</text>
+
+  <!-- Phase 3 -->
+  <rect x="590" y="40" width="140" height="60" class="phase-box"></rect>
+  <text x="660" y="68" class="phase-text">Phase 3</text>
+  <text x="660" y="88" class="label">Labeled Grid</text>
+
+  <!-- Arrows between phases -->
+  <line x1="160" y1="70" x2="210" y2="70" class="arrow"></line>
+  <line x1="350" y1="70" x2="400" y2="70" class="arrow"></line>
+  <line x1="540" y1="70" x2="590" y2="70" class="arrow"></line>
+
+  <!-- Wrap arrow: Phase 3 back to Phase 0 -->
+  <path d="M660,100 C660,130 400,130 90,100" class="arrow"></path>
+  <text x="380" y="135" class="label">Tap / Swipe Down to Close</text>
+
+</svg>

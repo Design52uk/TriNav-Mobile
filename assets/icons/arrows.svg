@@ -1,0 +1,11 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>TriNav Mobile Double Up Arrows</title>
+  <desc>Stacked double-chevron up arrows used for TriNav Mobile drawer control.</desc>
+
+  <!-- Top arrow (default grey) -->
+  <path d="M7 11 L12 7 L17 11" stroke="#777777" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Bottom arrow (default white) -->
+  <path d="M7 15 L12 11 L17 15" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

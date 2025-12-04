@@ -1,0 +1,23 @@
+TriNav™ Brand Description
+-------------------------
+
+TriNav™ is a next-generation navigation framework designed around
+multi-phase UI progression, dynamic vertical/horizontal motion, and
+intelligent visual signalling.
+
+The brand emphasises:
+
+• Minimalist design  
+• Arrow-driven motion  
+• Contextual expansion  
+• Subtle stacked layering (hamburger + arrows)  
+• Motion-first interaction philosophy  
+• Cross-device fluidity (mobile + desktop)  
+• High clarity, low noise UI patterns  
+• User-friendly thumb-zone ergonomics  
+
+TriNav™ represents a hybrid between OS-level navigation sheets and
+modern web/mobile component design.
+
+Brand Keywords:
+TriNAV • Design52 • Mark Roberts • Swipe Navigation • Multi-Phase Drawer • iOS Sheet • Smart Sidebar • Web OS Navigation • Adaptive UI
